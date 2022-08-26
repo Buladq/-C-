@@ -1,0 +1,34 @@
+﻿@model CasesView.Models.Case
+
+@{
+    Layout = "/Views/Home/Shared/_Layout.cshtml";
+}
+
+<h2>Добавление дела</h2>
+<form asp-action="create" method="post" asp-controller="home">
+    <div class="col-md-5">
+    <p>
+        <label asp-for="Name" class="form-text"></label><br/>
+        <input type="text" class="form-control" asp-for="Name"/>
+        <span asp-validation-for="Name" class="text-danger"></span>
+
+    </p>
+        <p>
+            <label asp-for="Description" class="form-text"></label><br/>
+            <input type="text" class="form-control" asp-for="Description"/>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </p>
+        
+    <p>
+        <label asp-for="Importance" class="form-text"></label><br/>
+        <input type="number" class="form-control" asp-for="Importance"/>
+        <span asp-validation-for="Importance" class="text-danger"></span>
+    </p>
+
+        <p>
+            <input type="submit" class="btn btn-success" value="Сохранить"/>
+        </p>
+       </div>
+</form>
+
+    

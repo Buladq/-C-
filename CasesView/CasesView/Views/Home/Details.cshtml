@@ -1,0 +1,22 @@
+﻿@model CasesView.Models.Case
+@{
+    Layout = "/Views/Home/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = Model.Name;
+}
+<h2>Дело: @Model.Name</h2>
+<div>
+    <dl class="dl-horizontal">
+        <dt class="form-text">Идентификатор</dt>
+        <dd>@Model.Id</dd>
+ 
+        <dt>Описание</dt>
+        <dd>@Model.Description</dd>
+        
+        <dt>Важность</dt>
+        <dd>@Model.Importance</dd>
+    </dl>
+    
+    <a asp-action="Index" class="btn btn-success">Назад</a>
+</div>
